@@ -1,0 +1,108 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 500px;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Adds space between children */
+    border-radius: 10px;
+}
+
+.container h2 img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.main button{
+    border-radius: 10px;
+    background-color: rgb(73, 190, 73);
+    color: white;
+    margin-left: 30px;
+    padding: 16px;
+}
+
+.main input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 20px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 10px 10px 40px; 
+    user-select: none;
+    position: relative; 
+}
+
+ul li:before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-image: url(https://cdn3.iconfinder.com/data/icons/arrows-160/96/uncheckedV_circle-512.png);
+    
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%); 
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked:before{
+    background-image: url(https://tse2.mm.bing.net/th/id/OIP.-vDAHzehx2wq3WeBFBJsWQHaHa?pid=Api&P=0&h=220);
+}
+
+/* solution present at down */
+ul li span{
+   right: 0;
+   top: 5px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    font-size: 22px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    
+
+}
+
+ul li span:hover{
+    background-color: rgb(204, 147, 147);
+}
+
+/*
+right: 0;	Align the span to the right edge of the <li>
+top: 5px;	Push it 5px down from the top of the <li>
+width: 50px;	Width of the circle/button
+height: 0;	⚠️ Might be a mistake. It should probably be 50px to make a circle
+position: absolute;	Positions the span inside the <li>, assuming li has position: relative;
+font-size: 22px;	Text/icon size inside the span
+text-align: center;	Center text horizontally
+line-height: 40px;	Center text vertically (makes span look like a button)
+border-radius: 50%;	Makes it a perfect circle*/
+
